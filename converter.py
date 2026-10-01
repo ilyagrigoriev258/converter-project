@@ -1,5 +1,7 @@
 """Конвертер величин: длина, масса, температура."""
-ROUND_DIGITS = 2
+import os
+
+ROUND_DIGITS = int(os.environ.get("ROUND_DIGITS", 2))
 
 def km_to_miles(km):
     return round(km * 0.621371, ROUND_DIGITS)
