@@ -13,3 +13,8 @@ if __name__ == "__main__":
     print("10 км =", km_to_miles(10), "миль")
     print("5 кг =", kg_to_pounds(5), "фунтов")
     print("25 °C =", celsius_to_fahrenheit(25), "°F")
+
+def read_values(path):
+    """Читает файл, по одному числу на строку."""
+    with open(path, encoding="utf-8") as f:
+        return [float(line.strip()) for line in f if line.strip()]
